@@ -1,0 +1,15 @@
+INFO    2021-12-01 17:01:55,931 [main] class com.qa.opencart.bases.BasePage  - Running test on PROD environment
+INFO    2021-12-01 17:01:58,632 [main] class com.qa.opencart.bases.BasePage  - Running test on local chrome browser
+INFO    2021-12-01 17:02:16,592 [main] class com.qa.opencart.bases.BasePage  - Searching the product: Macbook
+INFO    2021-12-01 17:02:29,605 [main] class com.qa.opencart.bases.BasePage  - Searching the product: MacBook 
+INFO    2021-12-01 17:02:37,081 [main] class com.qa.opencart.bases.BasePage  - Total product metadata list: 4
+INFO    2021-12-01 17:02:37,542 [main] class com.qa.opencart.bases.BasePage  - Total product price list: 2
+INFO    2021-12-01 17:02:37,809 [main] class com.qa.opencart.bases.BasePage  - Searching the product: Mac
+INFO    2021-12-01 17:02:43,804 [main] class com.qa.opencart.bases.BasePage  - Total product metadata list: 3
+INFO    2021-12-01 17:02:43,976 [main] class com.qa.opencart.bases.BasePage  - Total product price list: 2
+INFO    2021-12-01 17:02:44,090 [main] class com.qa.opencart.bases.BasePage  - Searching the product: Macbook
+INFO    2021-12-01 17:02:51,376 [main] class com.qa.opencart.bases.BasePage  - Searching the product: HP
+INFO    2021-12-01 17:02:59,891 [main] class com.qa.opencart.bases.BasePage  - Get screenshot of failed test case
+INFO    2021-12-01 17:03:00,815 [main] class com.qa.opencart.bases.BasePage  - Get screenshot of failed test case
+INFO    2021-12-01 17:03:01,737 [main] class com.qa.opencart.bases.BasePage  - Get screenshot of failed test case
+INFO    2021-12-01 17:03:03,029 [main] class com.qa.opencart.bases.BasePage  - Get screenshot of failed test case

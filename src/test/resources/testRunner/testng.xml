@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="OpenCart Automation Regression Suite">
+	<!-- thread-count="5" parallel="tests" -->
+
+	<listeners>
+		<listener
+			class-name="com.qa.opencart.testlisteners.ExtentReportListener" />
+		<listener
+			class-name="com.qa.opencart.testlisteners.TestAllureListener" />
+		<listener
+			class-name="com.qa.opencart.testlisteners.AnnotationTransformer" />
+	</listeners>
+
+	<!-- <test name="LoginPage Test - chrome 89"> <parameter name="browser" 
+		value="chrome" /> <parameter name="browserVersion" value="89" /> <classes> 
+		<class name="com.qa.opencart.tests.LoginPageTest"> </class> </classes> </test> -->
+
+	<!-- <test name="LoginPage Test - chrome 90" > thread-count = "5" parallel 
+		= "methods" <parameter name="browser" value="chrome" /> <parameter name="browserVersion" 
+		value="90" /> <classes> <class name="com.qa.opencart.tests.LoginPageTest"> 
+		</class> </classes> </test> -->
+
+	<!-- <test name="AccountPage Test"> <parameter name="browser" value="chrome" 
+		/> <parameter name="browserVersion" value="90" /> <classes> <class name="com.qa.opencart.tests.AccountPageTest" 
+		/> </classes> </test> -->
+
+	<test name="ProductInfoPage Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserVersion" value="90" />
+		<classes>
+			<class name="com.qa.opencart.tests.ProductInfoPageTest" />
+		</classes>
+	</test>
+
+	<!-- <test name="RegistrationPage Test"> <parameter name="browser" value="chrome" 
+		/> <parameter name="browserVersion" value="90" /> <classes> <class name="com.qa.opencart.tests.RegistrationPageTest" 
+		/> </classes> </test> -->
+
+
+
+
+</suite> 
