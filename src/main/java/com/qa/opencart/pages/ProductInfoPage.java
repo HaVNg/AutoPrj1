@@ -83,7 +83,8 @@ public class ProductInfoPage extends BasePage {
 	public void selectProductQuantity(String qty) {
 		util.doSendKeys(quantity, qty);
 	}
-
+	
+	// HaN
 	@Step("Get text message returned when adding a product to cart")
 	public String getAddToCartSuccessText(String qty) {	
 		selectProductQuantity(qty);
@@ -91,6 +92,7 @@ public class ProductInfoPage extends BasePage {
 		return util.waitForElementToPresentThenGetText(addToCartMsg);
 	}
 	
+	// HaN
 	@Step("Get product metadata in cart info button")
 	public Map<String, String> getProductInfoInCartButton() {
 		
@@ -99,12 +101,10 @@ public class ProductInfoPage extends BasePage {
 		List<WebElement> productList = util.getElements(productInfoInCartButton);
 
 		productList.stream().forEach(info -> productInfoCartButtonMap.put(info.getText().split(" ")[0].trim(), info.getText().split(" ")[1].trim()));
-//		for(WebElement e : productList) {
-//			productInfoCartButtonMap.put(e.getText().split(" ")[0].trim(), e.getText().split(" ")[1].trim());
-//		}
 		return productInfoCartButtonMap;
 	}
 	
+	// HaN
 	@Step("Navigating to View Cart page")
 	public ShoppingCartPage navigateToViewCartPage() {
 		util.doClick(cartInfoButton);

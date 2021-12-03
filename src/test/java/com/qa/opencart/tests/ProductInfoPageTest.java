@@ -65,10 +65,12 @@ public class ProductInfoPageTest extends BaseTest {
 		sa.assertAll();
 	}
 	
+	
 	@DataProvider
 	public Object[][] getiMacInfo() {
 		return ExcelUtil.getTestData(Constants.PRODUCT_INFO_IMAC_SHEET_NAME);
 	}
+	
 	
 	@Description("PPT4 - Verify metadata of a searched product - iMac")
 	@Test(priority = 4, dataProvider = "getiMacInfo")
@@ -89,7 +91,8 @@ public class ProductInfoPageTest extends BaseTest {
 		sa.assertAll();
 	}
 	
-	@Description("PPT5 - Verify add to cart action by checking the message returned")
+	// HaN
+	@Description("PPT5 - Verify add to cart action by checking the message returned - Macbook Pro")
 	@Test(priority = 5)
 	public void addToCartTestMacBookPro() {
 		resultPage = accountPage.doSearch("Macbook");
@@ -100,7 +103,8 @@ public class ProductInfoPageTest extends BaseTest {
 		Assert.assertTrue(msgReturned.contains(Constants.ADD_TO_CART_SUCCESS_MSG2));
 	}
 	
-	@Description("PPT5 - Verify add to cart action by checking the message returned")
+	// HaN
+	@Description("PPT6 - Verify add to cart action by checking the message returned - HP")
 	@Test(priority = 6)
 	public void addToCartTestHP() {
 		resultPage = accountPage.doSearch("HP");
@@ -111,13 +115,14 @@ public class ProductInfoPageTest extends BaseTest {
 		Assert.assertTrue(msgReturned.contains(Constants.ADD_TO_CART_SUCCESS_MSG2));
 	}
 	
+	// HaN
 	@DataProvider
 	public Object[][] getHPInfoCartInfoButton() {
 		return ExcelUtil.getTestData("product - HP");
 	}
 	
-	
-	@Description("PPT6 - Verify product info under cart info button")
+	// HaN
+	@Description("PPT7 - Verify product info under cart info button")
 	@Test (priority = 7, dataProvider = "getHPInfoCartInfoButton")
 	public void verifyProductInfoTestInCartButton(String subTotal, String total) {
 		

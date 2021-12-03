@@ -35,7 +35,8 @@ public class LoginPage extends BasePage {
 	public String getLoginPageTitle() {
 		return util.waitForTitleToPresent(Constants.LOGIN_PAGE_TITLE);
 	}
-
+	
+	//HaN (line 39-67)
 	@Step("LOGIN BLOCK - Get Login Block Heading Text")
 	public String getLoginBlockHeadingText() {
 		return util.doGetText(loginBlockHeadingText);
@@ -85,12 +86,14 @@ public class LoginPage extends BasePage {
 		return new AccountPage(driver);
 	}
 
+	// HaN
 	@Step("NEGATIVE LOGIN - Login with empty username and password...")
 	public String doLogin() {
 		util.doClick(loginButton);
 		return util.doGetText(loginErrorMsg);
 	}
 
+	// HaN
 	@Step("NEGATIVE LOGIN - Login with incorrect username: {0} and incorrect password: {1}!")
 	public String doLoginInvalidCredentials(String username, String password) {
 
@@ -101,6 +104,7 @@ public class LoginPage extends BasePage {
 		return util.doGetText(loginErrorMsg);	
 	}
 	
+	// HaN
 	@Step("Navigate to Registration page")
 	public RegistrationPage navigateToRegisterPage() {
 		util.doClick(regiterLink);

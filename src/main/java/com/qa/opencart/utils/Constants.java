@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Constants {
-	
+
 	public static final int DEFAULT_TIMEOUT = 5;
-	
+
 //==========LOGIN PAGE =======
 
 	// Login page title
@@ -23,8 +23,7 @@ public class Constants {
 	// Login error messages
 	public static final String LOGIN_ERROR_MSG = "Warning: No match for E-Mail Address and/or Password.";
 	public static final String LOGIN_CREDENTIALS_SHEET_NAME = "login";
-			
-	
+
 //==========ACCOUNT PAGE =======
 	// Account page title
 	public static final String ACCOUNT_PAGE_TITLE = "My Account";
@@ -43,7 +42,6 @@ public class Constants {
 
 	// test data
 	public static final String PRODUCT_SHEET_NAME = "search";
-	
 
 //=======PRODUCT INFO PAGE =======
 	public static final String PRODUCT_NAME = "name";
@@ -56,20 +54,27 @@ public class Constants {
 
 	public static final String ADD_TO_CART_SUCCESS_MSG1 = "Success: You have added";
 	public static final String ADD_TO_CART_SUCCESS_MSG2 = "to your shopping cart!";
-	
+
 	public static final String PRODUCT_SUBTOTAL = "Sub-Total";
 	public static final String PRODUCT_TOTAL = "Total";
-	
-	//test data
+
+	// test data
 	public static final String PRODUCT_INFO_MBPRO_SHEET_NAME = "product - MacBook Pro";
 	public static final String PRODUCT_INFO_IMAC_SHEET_NAME = "product - iMac";
 	public static final String PRODUCT_INFO_HP_SHEET_NAME = "product - HP";
-	
-	
+
 //=======REGISTER PAGE =======
 	public static final String REGISTER_PAGE_SHEET_NAME = "register";
 	public static final String REGISTER_SUCCESS_MSG = "Your Account Has Been Created!";
 	
-	
-	
+
+// =======SHOPPING CART PAGE =======
+	public static final String CART_PAGE_NOT_IN_STOCK_MSG = "Products marked with *** are not available in the desired quantity or not in stock!";
+	public static final String CART_PAGE_NUMBER_OF_PRODUCTS = "2";
+	public static final String CART_PAGE_NUMBER_OF_PRODUCT_IMG = "2";
+	public static final String[] EXPECTED_CART_PRODUCT_MACBOOKPRO = {
+			"MacBook Pro *** Reward Points: 12000 Product 18 $2,000.00 $30,000.00" };
+	public static final List<String> EXPECTED_CART_PRODUCT_HP = Arrays.asList("HP LP3065", "Delivery Date: 2011-04-22",
+			"Reward Points: 11100", "Product 21", " ", "$100.00", "$3,700.00");
+
 }
