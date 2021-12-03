@@ -21,6 +21,7 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertEquals(loginTitle, Constants.LOGIN_PAGE_TITLE);
 	}
 
+	// HaN
 	@Description("LPT2 - Verify All Texts Under Login Block Test")
 	@Test(priority = 2)
 	public void verifyLoginBlockTextTest() {
@@ -34,12 +35,14 @@ public class LoginPageTest extends BaseTest {
 		sa.assertAll();
 	}
 
+	// To revisit this to add TC and assertions
 	@Description("LPT3 - Click Forgot Password Link Test")
 	@Test(priority = 3, enabled = false)
 	public void doClickForgotPasswordLinkTest() {
 		loginPage.doClickForgotPwdLink();
 	}
 
+	// HaN
 	@Description("LPT4 - Verify Login Without Credentials Test")
 	@Test(priority = 4)
 	public void doLoginWithoutCredentitalsTest() {
