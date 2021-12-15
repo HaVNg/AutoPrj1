@@ -84,7 +84,7 @@ public class ProductInfoPage extends BasePage {
 		util.doSendKeys(quantity, qty);
 	}
 	
-	// HaN
+
 	@Step("Get text message returned when adding a product to cart")
 	public String getAddToCartSuccessText(String qty) {	
 		selectProductQuantity(qty);
@@ -92,7 +92,7 @@ public class ProductInfoPage extends BasePage {
 		return util.waitForElementToPresentThenGetText(addToCartMsg);
 	}
 	
-	// HaN
+
 	@Step("Get product metadata in cart info button")
 	public Map<String, String> getProductInfoInCartButton() {
 		
@@ -104,7 +104,7 @@ public class ProductInfoPage extends BasePage {
 		return productInfoCartButtonMap;
 	}
 	
-	// HaN
+
 	@Step("Navigating to View Cart page")
 	public ShoppingCartPage navigateToViewCartPage() {
 		util.doClick(cartInfoButton);

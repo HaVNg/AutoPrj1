@@ -25,13 +25,6 @@ public class ShoppingCartPageTest extends BaseTest {
 		
 		cartPage = productInfoPage.navigateToViewCartPage();	
 	}
-	/*
-	TC1 - Verify error msg of product not in stock
-	1. Check if any products have *** desc
-	2. Expected:  “Products marked with *** are not available in the desired quantity or not in stock!” msg is shown for that product
-	3. Click on “Checkout” button
-	4. Expected: the error msg is still shown
-	*/
 	
 	@Description ("CPT1 - Verify product not in stock error msg to be displayed in Cart page")
 	@Test (priority = 1)
@@ -43,11 +36,6 @@ public class ShoppingCartPageTest extends BaseTest {
 		Assert.assertTrue(cartPage.doGetNotInStockErrorText().contains(Constants.CART_PAGE_NOT_IN_STOCK_MSG));	
 	}
 	
-	/*
-	TC2 - Check product info 
-	1. Add 2 products in cart
-	2. Check number of products 
-	3. Expected: 2 products */
 	
 	@Test (priority = 2)
 	public void verifyNumberOfProductsAddedInCart() {
