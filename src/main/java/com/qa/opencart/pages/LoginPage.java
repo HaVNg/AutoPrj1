@@ -30,13 +30,11 @@ public class LoginPage extends BasePage {
 		util = new Utils(this.driver);
 	}
 
-
 	@Step("Get Login Page Title")
 	public String getLoginPageTitle() {
 		return util.waitForTitleToPresent(Constants.LOGIN_PAGE_TITLE);
 	}
-	
-	//HaN (line 39-67)
+
 	@Step("LOGIN BLOCK - Get Login Block Heading Text")
 	public String getLoginBlockHeadingText() {
 		return util.doGetText(loginBlockHeadingText);
@@ -67,7 +65,6 @@ public class LoginPage extends BasePage {
 		return util.getElement(pass).getAttribute("placeholder");
 	}
 
-	
 	@Step("Click on Forgot Password Link")
 	public ForgotPasswordPage doClickForgotPwdLink() {
 		if (util.getElement(forgotPasswordLink).isDisplayed()) {
@@ -75,39 +72,26 @@ public class LoginPage extends BasePage {
 		}
 		return new ForgotPasswordPage(driver);
 	}
-	
-	@Step("POSITIVE LOGIN - Login with correct username: {0} and correct password: {1}")
-	public AccountPage doLogin(String username, String password) {
 
-		util.doSendKeys(emailId, username);
-		util.doSendKeys(pass, password);
-		util.doClick(loginButton);
-
-		return new AccountPage(driver);
-	}
-
-	// HaN
-	@Step("NEGATIVE LOGIN - Login with empty username and password...")
-	public String doLogin() {
-		util.doClick(loginButton);
+	public String getErrorMsg() {
 		return util.doGetText(loginErrorMsg);
 	}
 
-	// HaN
-	@Step("NEGATIVE LOGIN - Login with incorrect username: {0} and incorrect password: {1}!")
-	public String doLoginInvalidCredentials(String username, String password) {
-
+	public void loginWithCredentials(String username, String password) {
 		util.doSendKeys(emailId, username);
 		util.doSendKeys(pass, password);
 		util.doClick(loginButton);
-
-		return util.doGetText(loginErrorMsg);	
 	}
-	
-	// HaN
+
+	public AccountPage navigateToAccountPage() {
+		return new AccountPage(driver);
+	}
+
+
 	@Step("Navigate to Registration page")
 	public RegistrationPage navigateToRegisterPage() {
 		util.doClick(regiterLink);
 		return new RegistrationPage(driver);
 	}
+
 }

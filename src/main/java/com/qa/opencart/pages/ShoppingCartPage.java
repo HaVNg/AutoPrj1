@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.qa.opencart.bases.BasePage;
 import com.qa.opencart.utils.Utils;
 
+// HaN
 public class ShoppingCartPage extends BasePage {
 	private WebDriver driver;
 	private Utils util;

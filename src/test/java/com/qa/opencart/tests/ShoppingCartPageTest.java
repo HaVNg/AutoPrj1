@@ -14,7 +14,8 @@ public class ShoppingCartPageTest extends BaseTest {
 	
 	@BeforeClass
 	public void cartPageSetUp() {
-		accountPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.loginWithCredentials(prop.getProperty("username"), prop.getProperty("password"));
+		accountPage = loginPage.navigateToAccountPage();
 		
 		resultPage = accountPage.doSearch("HP");
 		productInfoPage = resultPage.selectProductFromResult("HP LP3065");

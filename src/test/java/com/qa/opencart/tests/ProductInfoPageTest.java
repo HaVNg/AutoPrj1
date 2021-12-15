@@ -20,8 +20,8 @@ public class ProductInfoPageTest extends BaseTest {
 	@Description("PPT - Login to the website")
 	@BeforeClass
 	public void productInfoPageSetup() {
-		accountPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
-		log.info("Login the page...");
+		loginPage.loginWithCredentials(prop.getProperty("username"), prop.getProperty("password"));
+		accountPage = loginPage.navigateToAccountPage();	
 	}
 
 	@Description("PPT1 - Search a product then verify title of Product Info page")

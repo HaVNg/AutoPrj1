@@ -18,7 +18,8 @@ public class AccountPageTest extends BaseTest {
 	@Description("APT - Login to the website")
 	@BeforeClass
 	public void accountPageSetup() {
-		accountPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		loginPage.loginWithCredentials(prop.getProperty("username"), prop.getProperty("password"));
+		accountPage = loginPage.navigateToAccountPage();
 	}
 	
 	@Description("APT1 - Verify the Account page title")

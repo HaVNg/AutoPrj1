@@ -16,7 +16,7 @@ public class LoginPageTest extends BaseTest {
 
 	@Description("LPT1 - Verify Login Page Title Test")
 	@Test(priority = 1)
-	public void verifyLoginPageTitleTest() {
+	public void verifyLoginPageTitle() {
 		String loginTitle = loginPage.getLoginPageTitle();
 		Assert.assertEquals(loginTitle, Constants.LOGIN_PAGE_TITLE);
 	}
@@ -42,31 +42,34 @@ public class LoginPageTest extends BaseTest {
 		loginPage.doClickForgotPwdLink();
 	}
 
-	// HaN
-	@Description("LPT4 - Verify Login Without Credentials Test")
+
+	@Description("LPT4 - Verify error msg when logging without credentials")
 	@Test(priority = 4)
-	public void doLoginWithoutCredentitalsTest() {
-		String loginErrorMsg = loginPage.doLogin();
+	public void loginWithoutCredentitals() {
+		loginPage.loginWithCredentials(prop.getProperty("nullUserName"), prop.getProperty("nullUserName"));
+		String loginErrorMsg = loginPage.getErrorMsg();
 		Assert.assertEquals(loginErrorMsg, Constants.LOGIN_ERROR_MSG);
 	}
 	
-	// HaN
+
 	@DataProvider
 	public Object[][] getInvalidLoginCredentials() {
 		return ExcelUtil.getTestData(Constants.LOGIN_CREDENTIALS_SHEET_NAME);
 	}
 	
-	// HaN
+	
 	@Test(priority = 5, dataProvider = "getInvalidLoginCredentials")
-	public void doLoginWithInvalidCredentialsTest(String invalidUsername, String invalidPassword) {
-		String loginErrorMsg = loginPage.doLoginInvalidCredentials(invalidUsername, invalidPassword);
+	public void loginWithInvalidCredentials(String invalidUsername, String invalidPassword) {
+		loginPage.loginWithCredentials(invalidUsername, invalidPassword);
+		String loginErrorMsg = loginPage.getErrorMsg();
 		Assert.assertEquals(loginErrorMsg, Constants.LOGIN_ERROR_MSG);
 	}
 
 	@Description("LPT5 - Login With Valid Credentials and check if logout link exists")
 	@Test(priority = 6)
-	public void doLoginCorrectCredentialsTest() {
-		accountPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+	public void loginWithCorrectCredentials() {
+		loginPage.loginWithCredentials(prop.getProperty("username"), prop.getProperty("password"));
+		accountPage = loginPage.navigateToAccountPage();
 		Assert.assertTrue(accountPage.isLogoutLinkExisted());
 
 	}
