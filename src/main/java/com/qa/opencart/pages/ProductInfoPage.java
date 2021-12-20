@@ -1,4 +1,4 @@
-package com.qa.opencart.pages;
+ package com.qa.opencart.pages;
 
 import java.util.HashMap;
 import java.util.List;
